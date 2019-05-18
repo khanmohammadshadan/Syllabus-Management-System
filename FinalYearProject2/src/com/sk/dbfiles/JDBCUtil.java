@@ -7,14 +7,14 @@ public class JDBCUtil {
 	public static Connection getOraConnection() throws SQLException,ClassNotFoundException{
 		Class.forName("oracle.jdbc.driver.OracleDriver");
 		Connection connection = DriverManager.getConnection(
-		"jdbc:oracle:thin:@localhost:1521:ORCL", "SYSTEM", "indianarmy");
+		"jdbc:oracle:thin:@localhost:1521:ORCL", "SYSTEM", "mypassword");
 		return connection;
 	}
 	
 	public static Connection getMySQLConnection() throws SQLException,ClassNotFoundException{
 		Class.forName("com.mysql.jdbc.Driver");
 		String url = "jdbc:mysql://localhost:3306/jdbc";
-		Connection connection = DriverManager.getConnection(url, "SYSTEM", "indianarmy");
+		Connection connection = DriverManager.getConnection(url, "SYSTEM", "mypassword");
 		return connection;
 	}
 	
