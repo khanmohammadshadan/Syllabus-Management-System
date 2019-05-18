@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>download course file</title>
+</head>
+<body>
+<nav>
+<a href="Main_Page.html"> DASHBOARD</a>
+<a href="CreateCourse.jsp"> Create Course  </a>
+<a href="UpdateCourse.jsp"> Update Course</a>
+<a href="DeleteCourse.jsp"> Delete Course</a>
+<a href="ReviewCourse.jsp"> Review Course</a>
+</nav>
+
+<!-- 
+input your course_code to download
+<form method="post" action="downloadFileServlet">
+<input type="text" name="course_code"/>
+<input type="submit"  value="download button"/>
+<br>
+</form>
+<br>
+input course_code to view
+<form action="ViewSyllabusServlet">
+<input type="submit" value="View course"/>
+</form>
+ -->
+<form action="ViewSyllabusServlet" method="post" target="_blank">
+<input type="text" name="course_code"/>
+<br>
+<input type="submit" value="view course"/>
+</form>
+<br>
+<form action="DBFileDownloadServlet" method="post">
+<input type="text" name="course_code"/>
+<input type="submit"  value="download file"/>
+</form> 
+ 
+ 
+ 
+</body>
+</html>

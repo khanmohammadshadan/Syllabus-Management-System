@@ -1,0 +1,41 @@
+<html>
+<title> login Page</title>    
+    
+<head>   
+   <link href="adminloginstyle.css" type="text/css" rel="stylesheet"/>
+    </head>
+<body>
+    <h1> Student Login
+
+    </h1>
+
+    <center>
+        
+<form action="studentlogin" method="post">
+   
+   <span id="error_msg"></span>
+      <table class="field">
+       <tr> 
+        <td>
+            <label>Username</label>
+           </td>
+           <td class="inputbox"><input type="text"  name="username" placeholder=" admin, gu123, etc"/></td><br/>
+          </tr>
+          
+          <tr>
+              
+          <td><label>Password </label></td>
+              <td class="inputbox"> <input type="text"  name="password" placeholder=" 8-18 characters" minlength="8" maxlength="18"/></td><br/>
+          </tr>
+          
+       </table> 
+      <input type="hidden" value="student" name="logintype"/>
+        <br/>
+        <button type="submit" id="btnsubmit">SUBMIT</button>
+</form>   
+
+    </center>
+    <span id="diff_login"><a href="AdminLogin.html"> GO TO ADMIN LOGIN</a></span>
+    </body>
+    
+</html>

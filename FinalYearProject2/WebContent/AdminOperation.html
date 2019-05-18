@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Admin Operation Page</title>
+<script>
+ function checkpermission(){
+	
+	 
+	 if(permission_status=='dean'){
+		 alert('permission granted');
+		 return true;
+	 }
+	 else if(permission_status=='faculty')
+		 {
+		 alert('only dean has the permission to review course');
+		 return false;
+		 }
+	 else{
+		 alert('unauthorized ');
+		 return false;
+	 }
+	 
+ }
+</script>
+</head>
+<body>
+<nav>
+<a href="Main_Page.html">Dashboard</a>
+<!-- button for going to create update and delete page -->
+<a href="CreateCourse.jsp"> Create a new course</a><br>
+<a href="UpdateCourse.jsp"> update an existing course</a> <br> 
+<a href="DeleteCourse.jsp"> delete course </a><br>
+<a href="ReviewCourse.jsp" onsubmit="return checkpermission()"> Review a course</a> updates the status of a course by adding "reviewed" status<br>
+<a href="downloadCourse.html"> Download course syllabus page </a>
+</nav>
+<br>
+</body>
+</html>
